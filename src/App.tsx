@@ -7,7 +7,7 @@ import Login from './pages/Login'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Protected isAuth={false}/>,
+    element: <Protected isAuth={true}/>,
     children: [{ element: <Feed/> }]
   },
   {

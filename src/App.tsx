@@ -7,8 +7,8 @@ import Login from './pages/Login'
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Protected isAuth={true}/>,
-    children: [{ element: <Feed/> }]
+    element: <Protected/>,
+    children: [{ element: <Feed/>, index: true }]
   },
   {
     path: '/signup',

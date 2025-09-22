@@ -21,11 +21,14 @@ const Login = () => {
   const login = async () => {
     const res = await fetch('http://localhost:3001/api/v1/auth/login', {
       method: 'POST',
+      credentials: "include",
       headers: { 'Content-Type': "application/json" },
       body: JSON.stringify(loginDTO)
     })
 
     const data = await res.json()
+
+    console.log(res.headers)
 
     setIsLoading(false)
 
